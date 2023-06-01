@@ -1,0 +1,61 @@
+﻿<Page x:Class="ToolsStoreLab.View.LogsView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToolsStoreLab.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="LogsView"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 0"
+                    Orientation="Horizontal">
+            <StackPanel>
+                <DatePicker VerticalAlignment="Center" Name="dateFilter" FirstDayOfWeek="Monday"
+                        BorderThickness="0"/>
+                <TextBox Name="txtSearch" Height="20" Width="150"/>
+            </StackPanel>
+            
+            <Button Name ="btnSearch" Content="Пошук" Margin="15 0 0 0" Background="Transparent"
+                    Foreground="White" Width="55" BorderBrush="WhiteSmoke" BorderThickness="1" Click="btnSearch_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 20 0"
+                    Orientation="Horizontal">
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Пошта" Foreground="White"/>
+                <TextBox Name="txtUser" Width="70" KeyDown="txtUser_KeyDown"/>
+            </StackPanel>
+            
+            <StackPanel Margin="10">
+                <TextBlock Text="Тип запиту" Foreground="White"/>
+                <ComboBox Name="comboQueryTypeFilter" Width="70" DropDownClosed="comboFilter_DropDownClosed"/>
+            </StackPanel>
+            
+            <StackPanel Margin="10">
+                <TextBlock Text="Таблиця" Foreground="White"/>
+                <ComboBox Name="comboTableFilter" Width="70" DropDownClosed="comboFilter_DropDownClosed"/>
+            </StackPanel>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="Queries" Background="#cf5135" AutoGenerateColumns="False"
+                  IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Binding="{Binding QueryId}"/>
+                <DataGridTextColumn Header="Текст запиту" Binding="{Binding QueryText}" Width="300"/>
+                <DataGridTextColumn Header="Дата" Binding="{Binding Date}" Width="150"/>
+                <DataGridTextColumn Header="Пошта" Binding="{Binding UserEmail}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>

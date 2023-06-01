@@ -1,0 +1,65 @@
+﻿<Window x:Class="ToolsStoreLab.View.AutRegView.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolsStoreLab.View.AutRegView"
+        mc:Ignorable="d"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        Title="AutorizationWindow" Height="450" Width="400"
+        Background="#cf4525">
+
+    <Window.Resources>
+        <Image x:Key="ClosePict" Source="/View/AutRegView/close_icon.png"/>
+    </Window.Resources>
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="397*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Tools Store" VerticalAlignment="Center" HorizontalAlignment="Left"
+                   Foreground="White" FontSize="36" Margin="113,0,0,0"/>
+
+        <Button Height="24" Width="24" HorizontalAlignment="Right"
+                VerticalAlignment="Top" Background="#cf5525"
+                Name="CloseButton"
+                Click="CloseButton_Click" Content="{StaticResource ClosePict}"
+                BorderThickness="0"/>
+
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left"
+                    VerticalAlignment="Center" Margin="80,0,0,0">
+            <StackPanel Margin="20">
+                <TextBlock Text="Пошта" FontSize="28" Foreground="White"/>
+                <TextBox x:Name="txtEmail" FontSize="20" Width="200"/>
+            </StackPanel>
+
+            <StackPanel Margin="20">
+                <TextBlock Text="Пароль" FontSize="28" Foreground="White"/>
+                <PasswordBox x:Name="txtPassword" FontSize="20" Width="200"/>
+
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="146,0,0,0">
+
+            <Button Content="Увійти" Foreground="White" Background="Transparent"
+                    FontSize="24" Padding="20 0 20 0" BorderThickness="1"
+                    BorderBrush="White" x:Name="btnLogin" Click="btnLogin_Click"/>
+
+            <Button Content="Реєстрація" FontSize="14" BorderThickness="0"
+                    Background="Transparent" Foreground="SkyBlue" Margin="0"
+                    x:Name="btnRegistr" Click="btnRegistr_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

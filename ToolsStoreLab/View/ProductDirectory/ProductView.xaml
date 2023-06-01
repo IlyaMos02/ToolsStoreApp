@@ -1,0 +1,208 @@
+﻿<Page x:Class="ToolsStoreLab.View.ProductView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+      xmlns:local="clr-namespace:ToolsStoreLab.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ProductView" 
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Page.Resources>
+
+        <Image x:Key="FilledLikeBtn" Source="/View/filled_like_icon_16x16.png"/>
+        <Image x:Key="CartPict" Source="/cart_icon.png"/>
+
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="#cf5525"/>
+            <Setter Property="BorderBrush" Value="#cf5525"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Background" Value="DarkRed"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="{x:Type GridViewColumnHeader}">
+                    <Setter Property="Background" Value="#cf5525"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Style.Resources>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="ButtonStyle">
+            <Setter Property="Background" Value="#cf5525" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="BorderThickness" Value="2" />
+            <Setter Property="BorderBrush" Value="#cf5525" />
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="Padding" Value="10,5" />
+            <Setter Property="Margin" Value="10,0" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#d2691e" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="LikeButtonStyle">
+            <Setter Property="Background" Value="#cf5525"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#d2691e" />
+                    <Setter Property="Content" Value="{StaticResource FilledLikeBtn}"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="{x:Type Button}" x:Key="CartButtonStyle">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Margin" Value="0 0 50 0"/>
+            <Setter Property="Height" Value="60"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="DarkRed" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+    </Page.Resources>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 0"
+                    Orientation="Horizontal">
+            <TextBox Name="txtSearch" Height="20" Width="150"/>
+            <Button Name ="btnSearch" Style="{StaticResource ButtonStyle}"
+                    Content="Пошук" Click="btnSearch_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 20 0"
+                    Orientation="Horizontal">
+            <StackPanel Margin="10">
+                <TextBlock Text="Вид" Foreground="White"/>
+                <ComboBox Name="comboKindFilter" Width="60" DropDownClosed="comboFilter"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Категорія" Foreground="White"/>
+                <ComboBox Name="comboCategoryFilter" Width="60" DropDownClosed="comboFilter"/>
+            </StackPanel>
+
+            <StackPanel Margin="10">
+                <TextBlock Text="Джерело" Foreground="White"/>
+                <ComboBox Name="comboEnergySourceFilter" Width="60" DropDownClosed="comboFilter"/>
+            </StackPanel>
+        </StackPanel>
+
+        <ListView Grid.Row="1" x:Name="Products" FontSize="18" MouseDoubleClick="Products_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding ProductId}" Width="auto"/>
+                    <GridViewColumn Header="Назва" DisplayMemberBinding="{Binding Title}" Width="auto"/>
+                    <GridViewColumn Header="Категорія" DisplayMemberBinding="{Binding Characteristic.KindTool.Category}" Width="auto"/>
+                    <GridViewColumn Header="Вид" DisplayMemberBinding="{Binding Kind}" Width="auto"/>
+                    <GridViewColumn Header="Ціна" DisplayMemberBinding="{Binding Price}" Width="auto"/>
+                    <GridViewColumn Header="Оцінка" DisplayMemberBinding="{Binding Grade}" Width="auto"/>
+                    <GridViewColumn>
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Name="btnLike"
+                                        Click="btnLike_Click"
+                                        Style="{StaticResource LikeButtonStyle}">
+                                    <Image Source="/View/heart_icon_16x16.png" />
+                                </Button>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"
+                         Margin="75 0 0 0" Orientation="Horizontal"
+                    x:Name="AddDeletePanel">
+
+            <Button HorizontalAlignment="Left"
+                    Height="40" Width="75" Content="Додати" Style="{StaticResource ButtonStyle}"
+                    Name="AddProduct" Click="AddProduct_Click"/>
+
+            <Button Height="40" Width="100" Content="До кошика"
+                    Style="{StaticResource ButtonStyle}"
+                    Name="AddToCart" Click="AddToCart_Click"/>  
+
+            </StackPanel>
+
+        <Button Grid.Row="2" Name="Cart" HorizontalAlignment="Right"
+                Style="{StaticResource CartButtonStyle}"
+                Height="60" Content="{StaticResource CartPict}"           
+                Click="Cart_Click"/>
+
+    </Grid>
+</Page>

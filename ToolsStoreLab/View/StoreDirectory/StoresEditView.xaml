@@ -1,0 +1,48 @@
+﻿<Page x:Class="ToolsStoreLab.View.StoresEditView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToolsStoreLab.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StoresEditView">
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="20">
+                <TextBlock Text="Адреса" Foreground="White" FontSize="20"/>
+                <TextBox Text="{Binding Adress}" x:Name="txtAdress" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Margin="20">
+                <TextBlock Text="Час роботи" Foreground="White" FontSize="20"/>
+                <ComboBox Text="{Binding WorkTime}" x:Name="comboWorkTime" Width="150" FontSize="14"/>
+            </StackPanel>
+
+            <StackPanel Margin="20">
+                <TextBlock Text="Робота без електрики" Foreground="White" FontSize="20"/>
+                <ComboBox SelectedItem="{Binding WorkWithoutElectricity}" x:Name="comboElectricity" Width="150"/>
+            </StackPanel>
+
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal"
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Зберегти" Foreground="White" FontSize="24"
+                    Background="Transparent" BorderBrush="White"
+                    BorderThickness="1" Width="auto" Height="50"
+                    Name="btnSave" Margin="15" Click="btnSave_Click"/>
+            <Button Content="Відмінити" Foreground="White" FontSize="24"
+                    Background="Transparent" BorderBrush="White"
+                    BorderThickness="1" Width="auto" Height="50"
+                    Name="btnCancel" Margin="15" Click="btnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

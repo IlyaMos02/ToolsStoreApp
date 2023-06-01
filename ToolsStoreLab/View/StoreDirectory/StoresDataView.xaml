@@ -1,0 +1,60 @@
+﻿<Page x:Class="ToolsStoreLab.View.StoresDataView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToolsStoreLab.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StoresDataView">
+
+    <Page.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="24"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Width" Value="auto"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="15"/>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="40 0 0 0">
+        <TextBlock Text="Адреса" Foreground="White" FontSize="20"/>
+        <TextBlock Text="{Binding Adress}" x:Name="txtAdress"
+                           FontSize="16" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Margin="40 0 0 0" Grid.Row="1">
+            <TextBlock Text="Час роботи" Foreground="White" FontSize="20"/>
+            <TextBlock Text="{Binding WorkTime}" x:Name="txtWorkTime"
+                           FontSize="16" Foreground="White"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center"
+                    Margin="40 0 0 0" Grid.Row="2">
+            <TextBlock Text="Робота без електрики" Foreground="White" FontSize="20"/>
+            <TextBlock Text="{Binding WorkWithoutElectricity}" x:Name="txtWorkWithoutElectricity"
+                           FontSize="16" Foreground="White"/>
+        </StackPanel>
+
+        <Button Grid.Row="3" HorizontalAlignment="Left" Margin="40 0 0 0"
+                Content="Змінити" Name="btnEdit" Click="btnEdit_Click"/>
+
+        <Button Grid.Row="3" HorizontalAlignment="Right" Margin="0 0 40 0"
+                Content="Назад" Name="btnBack" Click="btnBack_Click"/>
+
+    </Grid>
+</Page>

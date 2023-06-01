@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ToolsStoreLab.MainWindow" Collapsed="true">
+    <Position X="7.25" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="GetInstance" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AIABABAAAQAAAAAAAABAgAAAJABAAAQAQAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Category" Collapsed="true">
+    <Position X="18.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAkAAAAAAAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Characteristic" Collapsed="true">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAACACAAAAAQ=</HashCode>
+      <FileName>Models\Characteristic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.EnergySource" Collapsed="true">
+    <Position X="18.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAACAAAAABAA=</HashCode>
+      <FileName>Models\EnergySource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Kind" Collapsed="true">
+    <Position X="15" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Models\Kind.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.KindTool" Collapsed="true">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAACAAAAAAAAAAAAAgBAAAACAAADAA=</HashCode>
+      <FileName>Models\KindTool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Product" Collapsed="true">
+    <Position X="13.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgAAAAAAASBgAEAACAAAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Models\Product.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Query" Collapsed="true">
+    <Position X="13.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIBAAAACAAAAAA=</HashCode>
+      <FileName>Models\Query.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Role" Collapsed="true">
+    <Position X="15" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACIAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Role.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.Store" Collapsed="true">
+    <Position X="13.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAACAAgAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Models\Store.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.User" Collapsed="true">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEIAACAAAAAAEAAAAAwABAAAAAACAAAAIAAAAAA=</HashCode>
+      <FileName>Models\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.Models.WorkTime" Collapsed="true">
+    <Position X="15" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAQAAAQA=</HashCode>
+      <FileName>Models\WorkTime.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.CategoryRepository" Collapsed="true">
+    <Position X="10.75" Y="4.25" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Repository\CategoryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.CharacteristicRepository" Collapsed="true">
+    <Position X="10.75" Y="2.75" Width="1.75" />
+    <Members>
+      <Method Name="CharacteristicRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ACBAAAAAAAAABAAAAAAAAAAAAAAQAAAAAAIAAAACAAA=</HashCode>
+      <FileName>_Repository\CharacteristicRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.KindToolRepository" Collapsed="true">
+    <Position X="10.75" Y="3.5" Width="1.75" />
+    <Members>
+      <Method Name="KindToolRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAQCAIBAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Repository\KindToolRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.ProductRepository" Collapsed="true">
+    <Position X="10.75" Y="2" Width="1.75" />
+    <Members>
+      <Method Name="ProductRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABAAAIAIAAABCAAAQAAAAgAAAAAAAAQUAAQCAABAAA=</HashCode>
+      <FileName>_Repository\ProductRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.QueryRepository" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="1.75" />
+    <Members>
+      <Method Name="QueryRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAIAAAgAAAgABAABAAAAAABACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>_Repository\QueryRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.StoreRepository" Collapsed="true">
+    <Position X="10.75" Y="5.25" Width="1.75" />
+    <Members>
+      <Method Name="StoreRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AARAAAABAAAABAAAAAAAAAAAAAAAAAAAABAAAAABAAA=</HashCode>
+      <FileName>_Repository\StoreRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab._Repository.UserRepository" Collapsed="true">
+    <Position X="10.75" Y="0.75" Width="1.75" />
+    <Members>
+      <Method Name="UserRepository" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAYAAAAAAAAABAAAAAAAAAAAAAEAAAAAEgAAAAABAAA=</HashCode>
+      <FileName>_Repository\UserRepository.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.View.AutRegView.AuthorizationWindow" Collapsed="true">
+    <Position X="8.25" Y="2.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAEAAAAAAAAABACAAAQAAAAAQAAAA=</HashCode>
+      <FileName>View\AutRegView\AuthorizationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.AutRegView.RegistrationWindow" Collapsed="true">
+    <Position X="8.25" Y="4.75" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAEAAAAAAIAABAAAAAQAAAAAQAAAA=</HashCode>
+      <FileName>View\AutRegView\RegistrationWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.ProductView" Collapsed="true">
+    <Position X="5.5" Y="2.75" Width="1.5" />
+    <Members>
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="Page_IsVisibleChanged" Hidden="true" />
+      <Method Name="ProductView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gABBAAAAAgAAJAAAEADAAAAABgBAAAggQBAAAACEAAA=</HashCode>
+      <FileName>View\ProductDirectory\ProductView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.StoresView" Collapsed="true">
+    <Position X="5.5" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="Page_IsVisibleChanged" Hidden="true" />
+      <Method Name="StoresView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AABFAAAAAAAARAAAAAAAAAAABABAAAAgQBAAAAAAAAA=</HashCode>
+      <FileName>View\StoreDirectory\StoresView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.ProfileView" Collapsed="true">
+    <Position X="5.5" Y="5.75" Width="1.5" />
+    <Members>
+      <Method Name="ChangeEnableStateOfTextBoxes" Hidden="true" />
+      <Method Name="GetInstance" Hidden="true" />
+      <Method Name="ProfileView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAADACAAAAAAAAAAEAAAAAAgBABAAAAAQAAAAEBIAAA=</HashCode>
+      <FileName>View\ProfileView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.SettingsView" Collapsed="true">
+    <Position X="5.5" Y="4.75" Width="1.5" />
+    <Members>
+      <Method Name="btnStressTest_Click" Hidden="true" />
+      <Method Name="SettingsView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAIIAAAAAAAhAAAAAAAAAQIAAAEAAAIACABAAAgA=</HashCode>
+      <FileName>View\SettingsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.ContactView" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ContactView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.ProductsDataView" Collapsed="true">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAAAAAAAAAAAIAAAAAAEAAAAQAAAAAAAQA=</HashCode>
+      <FileName>View\ProductDirectory\ProductsDataView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.CartView" Collapsed="true">
+    <Position X="3.75" Y="1.75" Width="1.5" />
+    <Members>
+      <Method Name="CartView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAABAAAAAACARAAAEAAAAIgAAAAAAAAAAAACAAAAAQA=</HashCode>
+      <FileName>View\ProductDirectory\CartView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.CartItem" Collapsed="true">
+    <Position X="2" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEACAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ProductDirectory\CartView.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToolsStoreLab.View.AddEditProductView" Collapsed="true">
+    <Position X="1.75" Y="2.75" Width="1.75" />
+    <Members>
+      <Method Name="AddEditProductView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>gAAAAAAAAAAABAAAAAAAAEAAAAAAEBAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ProductDirectory\AddEditProductView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.StoresDataView" Collapsed="true">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="btnBack_Click" Hidden="true" />
+      <Method Name="StoresDataView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>View\StoreDirectory\StoresDataView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.StoresEditView" Collapsed="true">
+    <Position X="2" Y="3.75" Width="1.5" />
+    <Members>
+      <Method Name="StoresEditView" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAEAAAABABBAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\StoreDirectory\StoresEditView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="ToolsStoreLab.View.LogsView" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.5" />
+    <Members>
+      <Method Name="LogsView" Hidden="true" />
+      <Method Name="Page_IsVisibleChanged" Hidden="true" />
+    </Members>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAABAAAAAAAAAAAAAAAAAAgABAAAAABAAA=</HashCode>
+      <FileName>View\LogsView.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

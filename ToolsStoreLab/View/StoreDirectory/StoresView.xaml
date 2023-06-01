@@ -1,0 +1,99 @@
+﻿<Page x:Class="ToolsStoreLab.View.StoresView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ToolsStoreLab.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="StoresView"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Page.Resources>
+        <Style TargetType="ListView">
+            <Setter Property="Background" Value="#cf5525"/>
+            <Setter Property="BorderBrush" Value="#cf5525"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Background" Value="DarkRed"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+            <Style.Resources>
+                <Style TargetType="{x:Type GridViewColumnHeader}">
+                    <Setter Property="Background" Value="#cf5525"/>
+                    <Setter Property="Foreground" Value="White"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    <Setter Property="BorderBrush" Value="White"/>
+                    <Setter Property="Padding" Value="5"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type GridViewColumnHeader}">
+                                <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" Padding="{TemplateBinding Padding}">
+                                    <ContentPresenter/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.8"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Style.Resources>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="false">
+                    <Setter Property="Opacity" Value="0.5"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Page.Resources>
+    
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <StackPanel HorizontalAlignment="Left" VerticalAlignment="Center" Margin="20 0 0 0"
+                    Orientation="Horizontal">
+            <TextBox Name="txtSearch" Height="20" Width="150"/>
+            <Button Name ="btnSearch" Content="Пошук" Margin="15 0 0 0" Background="Transparent"
+                    Foreground="White" Width="55" BorderBrush="WhiteSmoke" BorderThickness="1" Click="btnSearch_Click"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 20 0"
+                    Orientation="Horizontal">
+            <StackPanel Margin="10">
+                <TextBlock Text="Час роботи" Foreground="White"/>
+                <ComboBox Name="comboWorkTimeFilter" Width="70" DropDownClosed="comboFilter_DropDownClosed"/>
+            </StackPanel>
+        </StackPanel>
+
+        <ListView Grid.Row="1" Name="Stores" FontSize="18" 
+                  MouseDoubleClick="Stores_MouseDoubleClick">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding StoreId}" Width="auto"/>
+                    <GridViewColumn Header="Адреса" DisplayMemberBinding="{Binding Adress}" Width="auto"/>
+                    <GridViewColumn Header="Час роботи" DisplayMemberBinding="{Binding WorkTime}" Width="auto"/>
+                    <GridViewColumn Header="Робота без електрики" DisplayMemberBinding="{Binding WorkWithoutElectricity}" Width="auto"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+    </Grid>
+</Page>
